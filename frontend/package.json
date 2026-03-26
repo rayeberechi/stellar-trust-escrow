@@ -11,6 +11,8 @@
     "start:test": "next start --hostname 127.0.0.1 --port 3000",
     "lint": "eslint .",
     "analyze": "ANALYZE=true next build",
+    "build:analyze": "ANALYZE=true next build",
+    "build:report": "next build && node ../scripts/bundle-report.js --save",
     "test": "npm run test:unit && npm run test:integration && npm run test:a11y",
     "test:unit": "jest --config jest.config.cjs --testPathIgnorePatterns='tests/(pages|a11y|integration|e2e)' --passWithNoTests",
     "test:integration": "jest --config jest.config.cjs --testPathPattern='tests/(pages|integration)' --passWithNoTests",
